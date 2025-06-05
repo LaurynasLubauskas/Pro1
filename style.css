@@ -1,22 +1,198 @@
-body { margin:0; font-family:'Futura', 'Roboto', Arial, sans-serif; font-weight:300; background:#181c24; color:#e6e6e6; letter-spacing:0.01em; }
-header { text-align:center; background:linear-gradient(90deg,#0f2027,#19272d); color:#fff; padding:2.5rem 0 1.5rem 0; box-shadow:0 2px 8px #0003; }
-.hero-title { font-size:2.5rem; margin:0; font-weight:300; letter-spacing:-1px; font-family:'Futura', 'Roboto', Arial, sans-serif; }
-.hero-subtitle { font-size:1.2rem; margin:1rem 0 2rem 0; color:#b3c6e6; font-weight:300; font-family:'Futura', 'Roboto', Arial, sans-serif; }
-.cta-btn { background:#141e21; color:#fff; border:none; border-radius:24px; padding:0.75rem 2rem; font-size:1.1rem; font-weight:400; cursor:pointer; box-shadow:0 2px 8px #0004; transition:background .2s,color .2s; font-family:'Futura', 'Roboto', Arial, sans-serif; }
-.cta-btn:hover { background:#0f2027; color:#b3c6e6; }
-main { max-width:900px; margin:2.5rem auto; background:#232a36; border-radius:12px; box-shadow:0 4px 24px #0003; padding:2.5rem 2rem; }
-.features { display:flex; flex-wrap:wrap; gap:2rem; justify-content:center; margin-top:2.5rem; }
-.feature-card { background:#1b2028; border-radius:10px; box-shadow:0 2px 8px #0002; padding:1.5rem 1.2rem; flex:1 1 220px; min-width:220px; max-width:260px; text-align:center; transition:transform .15s; }
-.feature-card:hover { transform:translateY(-6px) scale(1.03); box-shadow:0 6px 24px #2c536440; }
-.feature-icon { font-size:2.2rem; margin-bottom:0.7rem; color:#b3c6e6; }
-h2 { font-size:1.3rem; margin:0.5rem 0 0.7rem 0; font-weight:300; font-family:'Futura', 'Roboto', Arial, sans-serif; cursor: default; }
-p { margin-top:0.7rem; font-weight:300; font-family:'Futura', 'Roboto', Arial, sans-serif; cursor: default; }
-footer { text-align:center; color:#6c7a89; font-size:.98rem; margin-top:2.5rem; background:none; padding-bottom:1.5rem; font-weight:300; font-family:'Futura', 'Roboto', Arial, sans-serif; }
-@media (max-width:700px) {
+:root[data-theme="light"] {
+  --text: #050315;
+  --background: #fbfbfe;
+  --primary: #2f27ce;
+  --secondary: #dedcff;
+  --accent: #433bff;
+}
+:root[data-theme="dark"] {
+  --text: #ebe9fc;
+  --background: #010104;
+  --primary: #3a31d8;
+  --secondary: #020024;
+  --accent: #0600c2;
+}
+
+body {
+  margin:0;
+  font-family:'Futura', 'Roboto', Arial, sans-serif;
+  font-weight:300;
+  background: var(--background);
+  color: var(--text);
+  letter-spacing:0.01em;
+}
+
+header {
+  text-align:center;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: var(--text);
+  padding:2.5rem 0 1.5rem 0;
+  box-shadow:0 2px 8px #0003;
+}
+
+.hero-title {
+  font-size:2.5rem;
+  margin:0;
+  font-weight:300;
+  letter-spacing:-1px;
+  font-family:'Futura', 'Roboto', Arial, sans-serif;
+}
+
+.hero-subtitle {
+  font-size:1.2rem;
+  margin:1rem 0 2rem 0;
+  color: var(--accent);
+  font-weight:300;
+  font-family:'Futura', 'Roboto', Arial, sans-serif;
+}
+
+.cta-btn {
+  background: var(--primary);
+  color: var(--background);
+  border:none;
+  border-radius:24px;
+  padding:0.75rem 2rem;
+  font-size:1.1rem;
+  font-weight:400;
+  cursor:pointer;
+  box-shadow:0 2px 8px #0004;
+  transition:background .2s,color .2s;
+  font-family:'Futura', 'Roboto', Arial, sans-serif;
+}
+
+.cta-btn:hover {
+  background: var(--accent);
+  color: var(--background);
+}
+
+main {
+  max-width:900px;
+  margin:2.5rem auto;
+  background: var(--secondary);
+  border-radius:12px;
+  box-shadow:0 4px 24px #0003;
+  padding:2.5rem 2rem;
+}
+
+.features {
+  display:flex;
+  flex-wrap:wrap;
+  gap:2rem;
+  justify-content:center;
+  margin-top:2.5rem;
+}
+
+.feature-card {
+  background: var(--background);
+  border-radius:10px;
+  box-shadow:0 2px 8px #0002;
+  padding:1.5rem 1.2rem;
+  flex:1 1 220px;
+  min-width:220px;
+  max-width:260px;
+  text-align:center;
+  transition:transform .15s;
+}
+
+.feature-card:hover {
+  transform:translateY(-6px) scale(1.03);
+  box-shadow:0 6px 24px var(--accent);
+}
+
+.feature-icon {
+  font-size:2.2rem;
+  margin-bottom:0.7rem;
+  color: var(--primary);
+}
+
+h2 {
+  font-size:1.3rem;
+  margin:0.5rem 0 0.7rem 0;
+  font-weight:300;
+  font-family:'Futura', 'Roboto', Arial, sans-serif;
+  cursor: default;
+}
+
+p {
+  margin-top:0.7rem;
+  font-weight:300;
+  font-family:'Futura', 'Roboto', Arial, sans-serif;
+  cursor: default;
+}
+
+footer {
+  text-align:center;
+  color: var(--primary);
+  font-size:.98rem;
+  margin-top:2.5rem;
+  background:none;
+  padding-bottom:1.5rem;
+  font-weight:300;
+  font-family:'Futura', 'Roboto', Arial, sans-serif;
+}
+
+/* Modern Toolbar Styles */
+.toolbar {
+  background: var(--primary);
+  color: var(--background);
+  padding: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.toolbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 2.5rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.toolbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.toolbar-links a {
+  color: var(--background);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.08rem;
+  transition: color 0.2s;
+  padding: 0.4em 0.7em;
+  border-radius: 6px;
+}
+
+.toolbar-links a:hover {
+  color: var(--accent);
+  background: var(--secondary);
+}
+
+@media (max-width: 700px) {
+  .toolbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.7rem 1rem;
+    gap: 0.7rem;
+  }
+  .toolbar-links {
+    gap: 1.1rem;
+  }
   main {
     padding:1.2rem 0.5rem;
   }
-
   .features {
     flex-direction:column;
     gap:1.2rem;
