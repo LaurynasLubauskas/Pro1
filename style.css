@@ -13,6 +13,12 @@ h2 { font-size:1.3rem; margin:0.5rem 0 0.7rem 0; font-weight:300; font-family:'F
 p { margin-top:0.7rem; font-weight:300; font-family:'Futura', 'Roboto', Arial, sans-serif; cursor: default; }
 footer { text-align:center; color:#6c7a89; font-size:.98rem; margin-top:2.5rem; background:none; padding-bottom:1.5rem; font-weight:300; font-family:'Futura', 'Roboto', Arial, sans-serif; }
 @media (max-width:700px) {
-  main { padding:1.2rem 0.5rem; }
-  .features { flex-direction:column; gap:1.2rem; }
+  main {
+    padding:1.2rem 0.5rem;
+  }
+
+  .features {
+    flex-direction:column;
+    gap:1.2rem;
+  }
 }
